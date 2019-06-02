@@ -44,10 +44,10 @@ Utvrđuje se da je algoritam odlično primjenjiv na dotičan problem.
 \textit{Heuristički algoritmi} (\textit{heuristike}) tehnike su kojima se pronalaze približna rješenja problema čije bi egzaktno rješavanje iziskivalo previše vremena ili koje uopće nije moguće egzaktno riješiti~\cite{Cupic}.
 Žrtvujući preciznost ili optimalnost konačnog rezultata, heuristike probleme rješavaju znatno brže od drugih uobičajenih metoda, često u polinomijalnoj složenosti~\cite{WikiHeuristic}.\\
 
-\textit{Metaheuristike} skupovi su algoritamskih koncepata kojima se traže, stvaraju ili odabiru druge heuristike s ciljem pronalaska dovoljno dobrog rješenja optimizacijskog problema~\cite{WikiMetaheuristic}.
-Prema tome, metaheuristike su zapravo heuristike opće namjene~\cite{Cupic}.
+\textit{Metaheuristike} skupovi su algoritamskih koncepata koje koristimo za definiranje heurističkih metoda primjenjivih na širok skup problema~\cite{Cupic}.
+Prema tome, metaheuristike su zapravo heuristike opće namjene kojima se usmjeravaju problemski specifične heuristike prema području u prostoru rješenja u kojem se nalaze dobra rješenja.
 One uzimaju uzorke iz skupa rješenja koji je prevelik za cjelovitu obradu.
-Ne garantiraju da će konačno rješenje problema ujedno biti i globalno optimalno (globalni minimum).
+Ne garantiraju da će konačno rješenje problema ujedno biti i globalno optimalno~\cite{WikiMetaheuristic}.
 
 \section{Evolucijski algoritmi}
 
@@ -82,7 +82,7 @@ Jedinke s malom dobrotom daleko su od traženog rješenja i imaju manju vjerojat
 
 Za provođenje GA potrebno je odrediti dva modela:
 \begin{itemize}
-	\item funkciju dobrote
+	\item funkciju dobrote te
 	\vspace{-1mm}
 	\item reprezentaciju genoma (kromosoma).
 \end{itemize}
@@ -284,11 +284,11 @@ Klonovi ne pridonose raznolikosti populacije pa ih je potrebno mutirati, što je
 Dodatno, učestalije mutacije pomažu da populacija prerano ne zapne u krivom lokalnom maksimumu.
 Uz veliku vjerojatnost mutacije populacija rijetko konvergira.
 
-Za funkciju dobrote odabrana je implementacija bazirana na jednadžbi \eqref{eq:fitnessNeg}, dakle negativna vrijednost sume kvadrata odstupanja.
+Za funkciju dobrote odabrana je implementacija bazirana na izrazu \eqref{eq:fitnessNeg}, dakle negativna vrijednost sume kvadrata odstupanja.
 Razlog takve odluke jest svojstvo \textit{DEAP Frameworka} koje omogućava dodavanje težinskog faktora izračunatoj dobroti.
 \textit{DEAP} uvijek traži jedinke s najvećom dobrotom pa se postavljanjem težine na vrijednost $-1.0$ vrlo jednostavno dobiva efekt traženja minimalne vrijednosti dobrote.
 Dodatno, tada se dobrota računa samo kao $RSS$, bez ikakvih izmjena, čime ujedno predstavlja i grešku aproksimacije.
-Radi potpunosti, testirana je i implementacija bazirana na formuli \eqref{eq:fitnessInv} te su postignuti vrlo slični rezultati.\\
+Radi potpunosti, testirana je i implementacija bazirana na izrazu \eqref{eq:fitnessInv} te su postignuti vrlo slični rezultati.\\
 
 U najgorem slučaju izvođenje programa zaustavlja se u trenutku kada je dosegnut maksimalno dozvoljen broj iteracija.
 Otprilike $200$ generacija dovoljno je za kvalitetnu aproksimaciju većine funkcija.
@@ -308,7 +308,7 @@ Njezina jednadžba napisana je odmah iznad grafa.
 Ako je zapisana u datoteci, originalna funkcija bit će nacrtana točkastom linijom zelene boje.
 
 Graf je moguće pomicati i uvećavati.
-Inicijalno će koordinatni sustav biti upravo dovoljno velik kako bi mogli biti prikazani svi podatci i vrijednosti funckije.\\
+Inicijalno će koordinatni sustav biti upravo dovoljno velik kako bi mogli biti prikazani svi podatci i vrijednosti funkcije.\\
 
 U nastavku slijede primjeri rezultata izvođenja programa za ulazne podatke prikazane u primjeru \ref{PrimjerDatoteke}.
 Tražena funkcija ima oblik \texttt{A*sin(B*x+C)*exp(D*x+F)}.
