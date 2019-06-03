@@ -188,6 +188,12 @@ def main():
     # data_path = "examples/sinExpWide.txt"
     # sym_fun_raw = "A*sin(B*x+C)*exp(D*x+F)"
 
+    # data_path = "examples/gauss.txt"
+    # sym_fun_raw = "1/(sqrt(2*pi)*SIGMA)*exp(-(x-MI)^2/(2*SIGMA^2))"
+
+    # data_path = "examples/gaussError.txt"
+    # sym_fun_raw = "1/(sqrt(2*pi)*SIGMA)*exp(-(x-MI)^2/(2*SIGMA^2))"
+
     # data_path = "examples/pureSin.txt"
     # sym_fun_raw = "A+B*sin(C*x+D)"
 
