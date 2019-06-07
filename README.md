@@ -1,2 +1,1 @@
-# Seminar-FER-2019
-## Genetski algoritam primijenjen na funkcijsku aproksimaciju
+# Genetic algorithm applied to function approximation
